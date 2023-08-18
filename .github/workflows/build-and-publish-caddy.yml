@@ -4,6 +4,7 @@ run-name: ${{ github.actor }} is running this Action
 on: 
   push:
     branches: ['release']
+  workflow-dispatch:
 
 env:
   REGISTRY: ghcr.io
