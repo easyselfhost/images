@@ -9,9 +9,7 @@ ARG TARGETOS
 ARG TARGETARCH
 
 RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} xcaddy build \
-    --with github.com/caddy-dns/cloudflare \
-    --with github.com/caddy-dns/route53 \
-    --with github.com/caddy-dns/namecheap 
+    --with github.com/caddy-dns/cloudflare
 
 FROM --platform=${TARGETPLATFORM} caddy:${VERSION}
 
